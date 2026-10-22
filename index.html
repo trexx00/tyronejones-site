@@ -65,6 +65,10 @@
   }
   .hero h1 .q { color: var(--accent); display: inline-block; transform-origin: 50% 85%; }
   .hero p.lede { font-size: clamp(1.125rem, 2vw, 1.375rem); max-width: 44ch; color: var(--text); margin: 0 0 36px; }
+  .hero-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+  .hero-img { margin: 0; }
+  .hero-img img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+  @media (max-width: 900px) { .hero-row { grid-template-columns: 1fr; } }
   .hero p.lede em { color: var(--muted); font-style: italic; }
   .actions { display: flex; flex-wrap: wrap; gap: 12px; }
   .btn {
@@ -172,10 +176,17 @@
   <section class="hero" id="top">
     <div class="wrap">
       <h1>Why not<span class="q">?</span></h1>
-      <p class="lede">I'm Tyrone Jones, a curious engineer and educator, always pondering that question when it comes to the future of technology. I'm leaning strongly into AI, but not just the most familiar one. <em>There are others that grab my interest too…</em></p>
-      <div class="actions">
-        <a class="btn primary" href="#topics">Explore the topics</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
+      <div class="hero-row">
+        <div>
+          <p class="lede">I'm Tyrone Jones, a curious engineer and educator, always pondering that question when it comes to the future of technology. I'm leaning strongly into AI, but not just the most familiar one. <em>There are others that grab my interest too…</em></p>
+          <div class="actions">
+            <a class="btn primary" href="#topics">Explore the topics</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <figure class="hero-img">
+          <img src="why-not.jpg" width="1408" height="768" alt="A small ant hauling a porcelain sugar bowl many times its size across the forest floor">
+        </figure>
       </div>
     </div>
   </section>
@@ -213,7 +224,7 @@
         <article class="topic">
           <div class="initials" aria-hidden="true">AI</div>
           <h3><b>A</b>m <b>I</b></h3>
-          <p>What is this in the mirror? The connection to the great I AM.</p>
+          <p>What is this in the mirror? Thoughts on connection and personal growth.</p>
           <span class="status">Coming soon</span>
         </article>
         <article class="topic">
@@ -254,8 +265,8 @@
     <div class="wrap cols">
       <h2 id="about-title">The guy who asks why not</h2>
       <div class="body">
-        <p>Engineer and computer scientist by training. High school teacher by choice.</p>
-        <p>I've spent my career building systems, and now I spend my days helping students understand them, from code to personal finance. This site is my notebook for the questions that don't fit in a lesson plan.</p>
+        <p>Engineer and computer scientist by training. High school teacher and coach by choice.</p>
+        <p>I've spent my career building systems, and now I spend some of my days helping students understand them, from code to personal finance to teamwork. This site is my notebook for the questions that don't fit in a lesson plan.</p>
         <p>Some of it is technical. Some of it is personal. All of it starts with the same two words.</p>
       </div>
     </div>
